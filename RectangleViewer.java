@@ -19,8 +19,12 @@ public class RectangleViewer {
       frame.add(component);
       frame.setVisible(true);    
       
-      //RectangleComponent component2 = new RectangleComponent(100,100,50,30); 
-      //frame.add(component);
-      //frame.setVisible(true);
+      RectangleComponent rect2 = new RectangleComponent(50,50,50,30); 
+      frame.add(rect2);
+      frame.setVisible(true);
+      
+      FaceComponent face = new FaceComponent();
+      frame.add(face);
+      frame.setVisible(true);
     } 
 }
