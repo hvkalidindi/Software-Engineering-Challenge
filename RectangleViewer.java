@@ -8,8 +8,11 @@
  */
 import javax.swing.JFrame;
 public class RectangleViewer {    
-    public static void main(String[] args)    
-    { JFrame frame = new JFrame();
+    final static int ANIMATION_TIME_IN_SECONDS = 60;
+    
+    public static void main(String[] args) throws InterruptedException   
+    { 
+        JFrame frame = new JFrame();
         
       frame.setSize(600, 600);       
       frame.setTitle("Two rectangles");       
@@ -26,5 +29,11 @@ public class RectangleViewer {
       FaceComponent face = new FaceComponent();
       frame.add(face);
       frame.setVisible(true);
+
+      for(int seconds = 0; seconds < ANIMATION_TIME_IN_SECONDS; seconds ++)
+    {
+      component.nextFrame();
+      Thread.sleep(1000);
     } 
+  }
 }

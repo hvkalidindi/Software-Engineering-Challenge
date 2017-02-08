@@ -48,4 +48,11 @@ import javax.swing.JComponent;
       // Draw moved rectangle       
       g2.draw(box);    
     } 
+    
+    public void nextFrame()
+    {
+        box.translate(10,10);
+        
+        repaint();
+    }
 }
